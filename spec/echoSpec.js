@@ -1,8 +1,10 @@
+
 describe("Echo Process Review ", function(){
     let date;
     let firstDate;
     let time;
     let timeArray;
+    let response;
     beforeEach(function(){
         firstDate = new Date()
         date = firstDate.toLocaleDateString()
@@ -10,13 +12,13 @@ describe("Echo Process Review ", function(){
         timeArray = time.split(" ")
         console.log(date)
         console.log(time)
-        console.log(timeArray)
+        console.log(timeArray[0])
     })  
     
     it("should return the input", function(){
-        let input = "hello"
-        let result = echo(input);
-        expect(result).toEqual(input + " " + date + " " + timeArray[0])
+        let response = "hello"
+        let result = echo(response);
+        expect(result).toEqual(response + " " + date + " " + timeArray[0])
     })
     it("should return the input", function(){
         let input = "hi"

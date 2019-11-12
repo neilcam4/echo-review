@@ -1,11 +1,11 @@
-function echo(string){
-    if(string != 'exit'){
+
+function echo(response){
+    if(response != 'exit'){
     firstDate = new Date()
     date = firstDate.toLocaleDateString();
     time = firstDate.toTimeString()
     timeArray = time.split(" ")
-    console.log(string + " " + date + " " + timeArray[0])
-    return string + " " + date + " " + timeArray[0]
+    return response + " " + date + " " + timeArray[0]
     } else {
         return 'Goodbye!'
     }
